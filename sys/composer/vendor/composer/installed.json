@@ -1,0 +1,53 @@
+{
+    "packages": [
+        {
+            "name": "flow/flow",
+            "version": "0.8.0",
+            "version_normalized": "0.8.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nramenta/flow.git",
+                "reference": "7723eb38d7a2fe84425e42509293d323dd351d30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nramenta/flow/zipball/7723eb38d7a2fe84425e42509293d323dd351d30",
+                "reference": "7723eb38d7a2fe84425e42509293d323dd351d30",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "time": "2017-03-09T05:41:20+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\": "src/Flow/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nofriandi Ramenta",
+                    "email": "nofriandi@ramenta.com"
+                }
+            ],
+            "description": "Fast PHP templating engine",
+            "keywords": [
+                "template",
+                "templating"
+            ],
+            "support": {
+                "issues": "https://github.com/nramenta/flow/issues",
+                "source": "https://github.com/nramenta/flow/tree/0.8.0"
+            },
+            "install-path": "../flow/flow"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

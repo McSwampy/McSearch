@@ -1,0 +1,71 @@
+<div class="toolbar">
+	<label>Search:</label>
+	<input
+		id="search_field"
+		type="text"
+		placeholder="Search term"
+		value="{{ SEARCH }}"
+	/>
+	<button onclick="search(this)" from="search_field">Search</button>
+</div>
+<table class="full">
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Host</td>
+			<td>Last Ran</td>
+			<td>Load Time</td>
+			<td>Proxy</td>
+			<td>Actions</td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for R in SITES %}
+			<tr id="row{{R.id}}">
+				<td>{{ R.id }}</td>
+				<td>{{ R.host }}</td>
+				<td>{{ R.last_ran }}</td>
+				<td>{{ R.load_time }}</td>
+				<td>
+					{% if R.use_proxy == 0 %}
+						N
+					{% else %}
+						Y
+					{% endif %}
+				</td>
+				<td>
+					{% if R.indexed %}
+						<button
+							onclick="buttonClick(this)"
+							parameter="{{ encrypt(R) }}"
+							data="{{ encrypt('Sites|index') }}"
+						>Re-Index</button>
+					{% else %}
+						<button
+							onclick="buttonClick(this)"
+							parameter="{{ encrypt(R) }}"
+							data="{{ encrypt('Sites|index') }}"
+						>Index</button>
+					{% endif %}
+					{% if R.active %}
+						<button
+							id="site_toggle_{{ R.id }}"
+							class="warning"
+							onclick="buttonClick(this)"
+							parameter="{{ encrypt(R) }}"
+							data="{{ encrypt('Sites|toggleEnabled') }}"
+						>Disable</button>
+					{% else %}
+						<button
+							id="site_toggle_{{ R.id }}"
+							class="good"
+							onclick="buttonClick(this)"
+							parameter="{{ encrypt(R) }}"
+							data="{{ encrypt('Sites|toggleEnabled') }}"
+						>Enable</button>
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

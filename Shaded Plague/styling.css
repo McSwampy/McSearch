@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+} body {
+	background-color: #3e3e3e;
+	color: #ebebeb;
+	font-family: 'Open Sans', Lucida Grande, sans-serif;
+	font-variant: petite-caps;
+	font-size: 10pt;
+	background-image: url('imgs/backgrounds/1.jpg');
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+} div.form {
+	display: block;
+	margin: auto;
+	box-shadow: 1pt 1pt 0 0 #333;
+	background-color: #555;
+} div.form.medium {
+	width: 600pt;
+} div.form.medium.top_spaced {
+    margin-top: 20pt;
+} div.form h1 {
+	background-color: #222;
+	font-size: 20pt;
+	padding: 5pt 10pt;
+	background: rgb(44,44,44);
+	background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgb(34 34 34) 50%, rgba(44,44,44,1) 100%);
+} div.form label {
+    display: block;
+    color: gray;
+    margin-bottom: 5pt;
+    margin-top: 5pt;
+} div.form input {
+	width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background: none repeat scroll left top #2C2C2C;
+    border-width: 1px;
+    border-radius: 1pt;
+    border-style: inset;
+	color: #ebebeb;
+	font-family: 'Open Sans', Lucida Grande, sans-serif;
+	font-variant: petite-caps;
+	transition: linear border-color 0.2s;
+} div.form input:focus {
+	border-color: #ff6a00;
+} div.form button {
+	display: block;
+    padding: 5pt 50pt;
+    border-radius: 1pt;
+    border-width: 1pt;
+    border-style: solid;
+    background-color: #222222;
+    color: #ff6a00;
+    cursor: pointer;
+	box-shadow: 1pt 1pt 0 0 #333;
+	transition: linear border-color 0.2s;
+} div.form button:hover, div.form button:focus, div.form button:active {
+	border-color: #ff6a00;
+} div.form p {
+    color: gray;
+    margin-bottom: 5pt;
+    margin-top: 5pt;
+} div.form a {
+    color: #ff6a00;
+    text-decoration: none;
+    margin-top: 5pt;
+    display: block;
+}
+
+
+#notificationDiv {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 256pt;
+} #notificationDiv div {
+	background-color: #555555;
+    padding: 5pt;
+    border-radius: 5pt;
+    margin-bottom: 5pt;
+    box-shadow: 0pt 1pt 3pt white;
+} #notificationDiv div h1 {
+	
+} #notificationDiv div p {
+	
+} #notificationDiv div.error {
+    box-shadow: 0pt 1pt 3pt #ff6a00;
+	color: #ff6a00;
+}
+
+button.top_spaced {
+	margin-top: 20pt;
+}
+
+.two_split {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "two_split_left two_split_right"; 
+}
+.two_split_left { grid-area: two_split_left;padding: 25pt; border-right: 1pt dotted gray;}
+.two_split_right { grid-area: two_split_right;padding: 25pt; }

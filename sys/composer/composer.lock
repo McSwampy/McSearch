@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "17a30918772b723c713f567db6d0ff5e",
+    "packages": [
+        {
+            "name": "flow/flow",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nramenta/flow.git",
+                "reference": "7723eb38d7a2fe84425e42509293d323dd351d30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nramenta/flow/zipball/7723eb38d7a2fe84425e42509293d323dd351d30",
+                "reference": "7723eb38d7a2fe84425e42509293d323dd351d30",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\": "src/Flow/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nofriandi Ramenta",
+                    "email": "nofriandi@ramenta.com"
+                }
+            ],
+            "description": "Fast PHP templating engine",
+            "keywords": [
+                "template",
+                "templating"
+            ],
+            "support": {
+                "issues": "https://github.com/nramenta/flow/issues",
+                "source": "https://github.com/nramenta/flow/tree/0.8.0"
+            },
+            "time": "2017-03-09T05:41:20+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

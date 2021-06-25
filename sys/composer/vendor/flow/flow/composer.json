@@ -1,0 +1,19 @@
+{
+    "name": "flow/flow",
+    "description": "Fast PHP templating engine",
+    "keywords": ["template", "templating"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nofriandi Ramenta",
+            "email": "nofriandi@ramenta.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {"Flow\\": "src/Flow/"}
+    }
+}
