@@ -1,5 +1,5 @@
 <?php
-// admin/stats.html 2021-06-25 12:43:43 GMT
+// admin/stats.html 2021-06-25 14:55:32 GMT
 class __FlowTemplate_49be1e04de8dfe831c747cfa6b4ecede extends \Flow\Template
 {
     const NAME = 'admin/stats.html';

@@ -207,6 +207,21 @@ function search(el){
 	a.query();
 }
 
+function submitForm(el, p){
+	a.addData('PARAMETER', 'FORM');
+	a.addData('DATA', encodeURIComponent(el.getAttribute('data')));
+	var form = el;
+	for(i = 1; i <= p; i++)
+		form = form.parentNode;
+	var children = form.childNodes;
+	for(c = 0; c < children.length; c++){
+		var childElement = children[c];
+		if(childElement.type == 'text' || childElement.type == 'password')
+			a.addData(childElement.name, childElement.value);
+	}
+	a.query();
+}
+
 function Notification(Title, Message, Icon){
 	var obj										= {};
 	obj.progress								= 0;

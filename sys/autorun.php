@@ -7,5 +7,7 @@ foreach($classes as $item){
 		require_once ROOT.'/sys/classes/'.$item;
 	}
 }
+new Response();
 Request::get();
 Template::Init();
+User::Init();

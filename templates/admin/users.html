@@ -1,0 +1,36 @@
+<table class="full">
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Active</td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for U in USERS %}
+			<tr>
+				<td>{{ U.id }}</td>
+				<td>{{ U.name }}</td>
+				<td>
+					{% if U.active %}
+						<button
+							id="user_toggle_{{ U.id }}"
+							class="warning"
+							onclick="buttonClick(this)"
+							parameter="{{ encrypt(U) }}"
+							data="{{ encrypt('Admin|toggleEnableUser') }}"
+						>Disable</button>
+					{% else %}
+						<button
+							id="user_toggle_{{ U.id }}"
+							class="good"
+							onclick="buttonClick(this)"
+							parameter="{{ encrypt(U) }}"
+							data="{{ encrypt('Admin|toggleEnableUser') }}"
+						>Enable</button>
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

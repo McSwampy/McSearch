@@ -17,8 +17,7 @@ class Template {
 	}
 	
 	public static function toJS(string $name){
-		$r = new Response();
-		$r->changeInnerHTML('container', self::load($name));
+		Response::changeInnerHTML('container', self::load($name));
 	}
 	
 	public static function output($location){
